@@ -1,14 +1,14 @@
 body {
-    display: grid;
-    margin: 5% auto;
+    margin: 3% auto;
     background: #F2ECE4;
     color: #594A3C;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-size: 1.25rem;
     line-height: 1.5;
     text-shadow: 0 1px 0 #fff;
     max-width: 90%;
     text-align: center;
+    list-style-position: inside;
 }
 
 a {
@@ -23,6 +23,22 @@ main a {
 
 a:hover {
     border-bottom: 0;
+}
+
+nav {
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 2rem;
+}
+
+table {
+    border: 1px solid #594A3C;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #594A3C;
+    padding: 1rem;
 }
 
 footer {
