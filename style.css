@@ -1,5 +1,8 @@
 body {
-    margin: 3% auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: auto;
     background: #F2ECE4;
     color: #594A3C;
     font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -9,6 +12,10 @@ body {
     max-width: 90%;
     text-align: center;
     list-style-position: inside;
+}
+
+header {
+    margin-top: 2%;
 }
 
 a {
@@ -27,7 +34,10 @@ a:hover {
 
 nav {
     font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 2rem;
+}
+
+main {
+    padding: 0 5% 2rem;
 }
 
 table {
@@ -42,11 +52,20 @@ table td, table th {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
+    margin-top: auto;
     font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #594A3C;
+    width: 80%;
+}
+
+.ruler-big {
+    height: 2px;
+    margin: 2rem 0;
+    width: 100%;
 }
