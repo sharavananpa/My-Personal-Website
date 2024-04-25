@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100svh;
+    min-height: 100dvh;
     margin: auto;
     background: #F2ECE4;
     color: #594A3C;
