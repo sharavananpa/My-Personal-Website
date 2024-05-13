@@ -3,15 +3,14 @@ body {
     flex-direction: column;
     min-height: 100svh;
     margin: auto;
-    background: #F2ECE4;
-    color: #594A3C;
+    background: #f2ece4;
+    color: #594a3c;
     font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-size: 1.25rem;
     line-height: 1.5;
     text-shadow: 0 1px 0 #fff;
     max-width: 90%;
     text-align: center;
-    list-style-position: inside;
 }
 
 header {
@@ -19,8 +18,8 @@ header {
 }
 
 a {
-    border-bottom: 1px solid #594A3C;
-    color: #594A3C;
+    border-bottom: 1px solid #594a3c;
+    color: #594a3c;
     text-decoration: none;
 }
 
@@ -33,30 +32,19 @@ a:hover {
 }
 
 nav {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-table {
-    border: 1px solid #594A3C;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-table td, table th {
-    border: 1px solid #594A3C;
-    padding: 1rem;
+    font-family: "Courier New", Courier, monospace;
 }
 
 footer {
     margin-top: auto;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-weight: lighter;
 }
 
 hr {
     border: none;
     height: 1px;
-    background: #594A3C;
+    background: #594a3c;
     width: 80%;
 }
 
