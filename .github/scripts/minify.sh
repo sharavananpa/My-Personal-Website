@@ -8,3 +8,7 @@ find . -type f \( -iname \*.html -o -iname \*.js -o -iname \*.css \) | while rea
     do
     minify ${fname} | sponge ${fname}
     done
+
+rm -r .github
+rm README.md
+rm .gitignore
