@@ -15,7 +15,7 @@ jobs:
           ref: ${{ github.ref }}
 
       - name: Minify HTML, CSS and JS files
-        run: ./minify.sh
+        run: ./.github/scripts/minify.sh
 
       # Auto-commit to repository
       - uses: stefanzweifel/git-auto-commit-action@v5
