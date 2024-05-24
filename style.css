@@ -1,10 +1,15 @@
+:root {
+    --primary: #594a3c;
+    --secondary: #f2ece4;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100svh;
     margin: auto;
-    background: #f2ece4;
-    color: #594a3c;
+    background: var(--secondary);
+    color: var(--primary);
     font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -13,22 +18,32 @@ body {
     text-align: center;
 }
 
-header {
-    margin-top: 2%;
-}
-
 a {
-    border-bottom: 1px solid #594a3c;
-    color: #594a3c;
+    border-bottom: 1px solid var(--primary);
+    color: var(--primary);
     text-decoration: none;
-}
-
-main a {
-    font-weight: bolder;
 }
 
 a:hover {
     border-bottom: 0;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background: var(--primary);
+    width: 80%;
+}
+
+.ruler-big {
+    height: 2px;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+header {
+    margin-top: 2%;
 }
 
 nav {
@@ -39,17 +54,4 @@ footer {
     margin-top: auto;
     font-family: "Courier New", Courier, monospace;
     font-weight: lighter;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background: #594a3c;
-    width: 80%;
-}
-
-.ruler-big {
-    height: 2px;
-    margin: 2rem 0;
-    width: 100%;
 }
