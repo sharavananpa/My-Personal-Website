@@ -18,10 +18,20 @@ body {
     text-align: center;
 }
 
+@media screen and (min-width: 769px) {
+    body {
+        max-width: 65%;
+    }
+}
+
 a {
     border-bottom: 1px solid var(--primary);
     color: var(--primary);
     text-decoration: none;
+}
+
+main a {
+    font-weight: bolder;
 }
 
 a:hover {
@@ -48,10 +58,13 @@ header {
 
 nav {
     font-family: "Courier New", Courier, monospace;
+    font-weight: lighter;
 }
 
 footer {
     margin-top: auto;
+    margin-bottom: 1rem;
     font-family: "Courier New", Courier, monospace;
     font-weight: lighter;
+    font-size: smaller;
 }
