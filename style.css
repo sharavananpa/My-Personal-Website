@@ -1,70 +1,49 @@
 :root {
-    --primary: #594a3c;
-    --secondary: #f2ece4;
+    --primary-color: #e0e0e0;
+    --secondary-color: #151515;
+    --accent-color: #ff6f61;
+    --shadow-color: #555;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100svh;
     margin: auto;
-    background: var(--secondary);
-    color: var(--primary);
-    font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
     font-size: 1.25rem;
     line-height: 1.5;
-    text-shadow: 0 1px 0 #fff;
-    max-width: 90%;
     text-align: center;
-}
-
-@media screen and (min-width: 769px) {
-    body {
-        max-width: 65%;
-    }
+    min-height: 100svh;
+    max-width: 90%;
+    text-shadow: 0 1px 0 var(--shadow-color);
 }
 
 a {
-    border-bottom: 1px solid var(--primary);
-    color: var(--primary);
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--accent-color);
     text-decoration: none;
-}
-
-main a {
-    font-weight: bolder;
 }
 
 a:hover {
     border-bottom: 0;
-}
-
-
-hr {
-    border: none;
-    height: 1px;
-    background: var(--primary);
-    width: 80%;
-}
-
-.ruler-big {
-    height: 2px;
-    margin: 2rem 0;
-    width: 100%;
-}
-
-header {
-    margin-top: 2%;
+    color: var(--accent-color);
 }
 
 nav {
-    font-family: "Courier New", Courier, monospace;
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
     font-weight: lighter;
+    font-size: smaller;
 }
 
 footer {
-    margin-top: auto;
-    margin-bottom: 1rem;
-    font-family: "Courier New", Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
     font-weight: lighter;
     font-size: smaller;
+    margin-top: auto;
+    margin-bottom: 2rem;
 }

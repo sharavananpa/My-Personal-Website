@@ -5,8 +5,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A simple website that I have built with plain html and css to host my thoughts. This is the index page that compiles other pages.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
+  <style>
+    aside {
+      font-weight: lighter;
+    }
+
+    a {
+      font-weight: bolder;
+    }
+
+    .button {
+      align-content: center;
+      appearance: none;
+      background-color: var(--primary-color);
+      border-radius: 1rem;
+      border-width: 0;
+      box-shadow: var(--accent-color) 0 -3px inset;
+      color: var(--secondary-color);
+      cursor: pointer;
+      font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+      font-weight: lighter;
+      font-size: smaller;
+      height: 2rem;
+      margin-top: 1rem;
+      padding: 0 1rem;
+      text-shadow: none;
+      transition: transform .15s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button:active {
+      transform: translateY(2px);
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Sharavanan</title>
 </head>
 
@@ -14,20 +54,38 @@
   <header>
     <h1>Hi, this is Sharavanan!</h1>
   </header>
-  <div>
+  <aside>
     I'm from down <a href="https://en.wikipedia.org/wiki/Tamil_Nadu" target="_blank" rel="noopener noreferrer">south of India</a>. <br>
     I build softwares and make music.
-  </div>
+  </aside>
   <main>
     <p><a href="music">Music</a></p>
     <p><a href="https://sharavananpa.substack.com/" target="_blank" rel="noopener noreferrer">Writings</a></p>
     <p><a href="projects">Independent Projects</a></p>
     <p><a href="cv">CV (Course of Life)</a></p>
     <p><a href="contact">How to reach me?</a></p>
+    <p><a href="now">/now</a></p>
   </main>
   <footer>
-    <p><em><a href="https://lite.sharavananpa.dev/">Lite version</a></em> /(^.^/)</p>
+    <span class="button" onclick="setRandomAccentColor()">Change accent</span>
+    <a class="button" href="https://lite.sharavananpa.dev/">Lite version /(^.^/)</a>
   </footer>
+  <script>
+    const accentColors = ['red', 'green', 'blue', 'yellow'];
+
+    function setRandomAccentColor() {
+      var randomIndex = 0;
+      const existingIndex = sessionStorage.getItem('accentColorIndex');
+      if (existingIndex !== null) {
+        randomIndex = (parseInt(existingIndex) + 1) % accentColors.length;
+      }
+
+      const selectedColor = accentColors[randomIndex];
+      document.documentElement.style.setProperty('--accent-color', selectedColor);
+      sessionStorage.setItem('accentColor', selectedColor);
+      sessionStorage.setItem('accentColorIndex', randomIndex);
+    }
+  </script>
 </body>
 
 </html>
