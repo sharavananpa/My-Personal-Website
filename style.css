@@ -20,6 +20,12 @@ body {
     text-shadow: 0 1px 0 var(--shadow-color);
 }
 
+@media screen and (min-width: 992px) {
+    body {
+        max-width: 72%;
+    }
+}
+
 a {
     color: var(--primary-color);
     border-bottom: 1px solid var(--accent-color);
@@ -38,9 +44,6 @@ nav {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
     font-weight: lighter;
     font-size: smaller;
