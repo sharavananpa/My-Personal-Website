@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
 import cleanCSS from 'gulp-clean-css';
 import uglify from 'gulp-uglify';
-import rename from 'gulp-rename';
+import minifyInline from "gulp-minify-inline";
 import rev from 'gulp-rev';
 import revReplace from 'gulp-rev-replace';
 import { deleteAsync } from 'del';
@@ -15,17 +15,14 @@ gulp.task('minify-html', () => {
   return gulp.src('*.html', { base: '.' })
     .pipe(htmlmin({
       collapseWhitespace: true,
-      removeComments: true,
-      minifyCSS: true,
-      minifyJS: true
     }))
+    // .pipe(minifyInline())
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('minify-css', () => {
   return gulp.src('*.css', { base: '.' })
     .pipe(cleanCSS())
-    .pipe(rename({ suffix: '.min' }))
     .pipe(rev())
     .pipe(gulp.dest('dist'))
     .pipe(rev.manifest('dist/rev-manifest.json', { merge: true }))
@@ -35,7 +32,6 @@ gulp.task('minify-css', () => {
 gulp.task('minify-js', () => {
   return gulp.src('*.js', { base: '.' })
     .pipe(uglify())
-    .pipe(rename({ suffix: '.min' }))
     .pipe(rev())
     .pipe(gulp.dest('dist'))
     .pipe(rev.manifest('dist/rev-manifest.json', { merge: true }))
