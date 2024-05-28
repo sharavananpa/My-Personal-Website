@@ -34,16 +34,4 @@ function initializeAccentColor() {
     }
 }
 
-function setRandomAccentColor() {
-    var randomIndex = 0;
-    const existingIndex = sessionStorage.getItem('accentColorIndex');
-    if (existingIndex !== null) {
-        randomIndex = (parseInt(existingIndex) + 1) % accentColors.length;
-    }
-    const selectedColor = accentColors[randomIndex];
-    document.documentElement.style.setProperty('--accent-color', selectedColor);
-    sessionStorage.setItem('accentColor', selectedColor);
-    sessionStorage.setItem('accentColorIndex', randomIndex);
-}
-
 initializeAccentColor();
