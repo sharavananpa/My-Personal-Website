@@ -7,5 +7,4 @@ mv CNAME dist/CNAME
 rm *
 mv -v ./dist/* .
 rm dist
-rm .gitignore
 rm -r .github
