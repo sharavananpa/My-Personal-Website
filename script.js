@@ -1,24 +1,24 @@
 const accentColors = [
-    '#FF5733', // Coral
-    '#33FF57', // Spring Green
-    '#4169E1', // Royal Blue
-    '#FF00FF', // Magenta
-    '#FFFF00', // Yellow
-    '#FFA07A', // Light Salmon
-    '#2E8B57', // Sea Green
-    '#DA70D6', // Orchid
-    '#8A2BE2', // Blue Violet
-    '#FF1493', // Deep Pink
-    '#00CED1', // Dark Turquoise
-    '#FF6347', // Tomato
-    '#4682B4', // Steel Blue
-    '#D2691E', // Chocolate
-    '#FF8C00', // Dark Orange
-    '#ADFF2F', // Green Yellow
-    '#40E0D0', // Turquoise
-    '#DC143C', // Crimson
-    '#FFD700', // Gold
-    '#6A5ACD', // Slate Blue
+    '#ff5733', // coral
+    '#33ff57', // spring green
+    '#4169e1', // royal blue
+    '#ff00ff', // magenta
+    '#ffff00', // yellow
+    '#ffa07a', // light salmon
+    '#2e8b57', // sea green
+    '#da70d6', // orchid
+    '#8a2be2', // blue violet
+    '#ff1493', // deep pink
+    '#00ced1', // dark turquoise
+    '#ff6347', // tomato
+    '#4682b4', // steel blue
+    '#d2691e', // chocolate
+    '#ff8c00', // dark orange
+    '#adff2f', // green yellow
+    '#40e0d0', // turquoise
+    '#dc143c', // crimson
+    '#ffd700', // gold
+    '#6a5acd', // slate blue
 ];
 
 function initializeAccentColor() {

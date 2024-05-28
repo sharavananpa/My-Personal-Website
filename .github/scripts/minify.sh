@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-npm install gulp gulp-htmlmin gulp-clean-css gulp-uglify gulp-minify-inline gulp-rev gulp-rev-replace del --save-dev
+npm install gulp gulp-htmlmin gulp-clean-css gulp-uglify gulp-minify-inline gulp-svgmin gulp-rev gulp-rev-replace del --save-dev
 gulp
 
 mv CNAME dist/CNAME
