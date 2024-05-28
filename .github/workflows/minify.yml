@@ -24,4 +24,3 @@ jobs:
           branch: minified-main
           create_branch: true
           push_options: '--force'
-          repository: dist
