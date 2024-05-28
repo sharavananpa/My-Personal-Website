@@ -1,14 +1,5 @@
 #!/bin/sh -l
 
-npm i minify -g
-sudo apt-get update
-sudo apt-get -y install moreutils
+npm install gulp gulp-htmlmin gulp-clean-css gulp-uglify gulp-rename gulp-rev gulp-rev-replace del --save-dev
 
-find . -type f \( -iname \*.html -o -iname \*.js -o -iname \*.css \) | while read fname
-    do
-    minify ${fname} | sponge ${fname}
-    done
-
-rm -r .github
-rm README.md
-rm .gitignore
+gulp
