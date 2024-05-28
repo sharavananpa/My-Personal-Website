@@ -29,8 +29,8 @@ function initializeAccentColor() {
         const randomIndex = Math.floor(Math.random() * accentColors.length);
         const selectedColor = accentColors[randomIndex];
         document.documentElement.style.setProperty('--accent-color', selectedColor);
-        sessionStorage.setItem('accentColor', selectedColor);
-        sessionStorage.setItem('accentColorIndex', randomIndex);
+        window.sessionStorage.setItem('accentColor', selectedColor);
+        window.sessionStorage.setItem('accentColorIndex', randomIndex);
     }
 }
 
