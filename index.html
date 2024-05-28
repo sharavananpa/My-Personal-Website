@@ -39,18 +39,18 @@
       margin-top: 1rem;
       padding: 0 1rem;
       text-shadow: none;
-      transition: transform .15s;
+      transition: transform .1s ease-out;
       user-select: none;
       -webkit-user-select: none;
-      touch-action: manipulation;
+      touch-action: none;
     }
 
     .button:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
     .button:active {
-      transform: translateY(2px);
+      transform: translateY(3px);
     }
   </style>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -71,11 +71,10 @@
     <p><a href="projects">Independent Projects</a></p>
     <p><a href="cv">CV (Course of Life)</a></p>
     <p><a href="contact">How to reach me?</a></p>
-    <p><a href="now">/now</a></p>
   </main>
   <footer>
-    <span class="button" onclick="setRandomAccentColor()" ontouchstart>Change accent</span>
-    <a class="button" href="https://lite.sharavananpa.dev/" ontouchstart>Lite version /(^.^/)</a>
+    <span class="button" onclick="setRandomAccentColor()">Change accent</span>
+    <a class="button" href="https://lite.sharavananpa.dev/">Lite version /(^.^/)</a>
   </footer>
   <script>
     function setRandomAccentColor() {
@@ -86,10 +85,13 @@
       }
       const selectedColor = accentColors[randomIndex];
       document.documentElement.style.setProperty('--accent-color', selectedColor);
-      document.documentElement
       sessionStorage.setItem('accentColor', selectedColor);
       sessionStorage.setItem('accentColorIndex', randomIndex);
     }
+
+    [...document.getElementsByClassName("button")].forEach(button => {
+      button.addEventListener("touchstart", () => { }, { passive: true });
+    });
   </script>
 </body>
 
